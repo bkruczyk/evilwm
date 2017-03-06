@@ -44,7 +44,7 @@ OPT_CPPFLAGS += -DVWM
 #OPT_CPPFLAGS += -DWARP_POINTER
 
 # Uncomment to use Ctrl+Alt+q instead of Ctrl+Alt+Escape.  Useful for Cygwin.
-#OPT_CPPFLAGS += -DKEY_KILL=XK_q
+OPT_CPPFLAGS += -DKEY_KILL=XK_q
 
 # Uncomment to include whatever debugging messages I've left in this release.
 #OPT_CPPFLAGS += -DDEBUG   # miscellaneous debugging
