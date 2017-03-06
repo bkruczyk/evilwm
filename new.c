@@ -85,7 +85,11 @@ void make_new_client(Window w, ScreenInfo *s) {
 	 * X calls to raise an X error and thus flag it for removal. */
 	XUngrabServer(dpy);
 
-	c->border = opt_bw;
+	if (window_type & EWMH_WINDOW_TYPE_DOCK) {
+          c->border = 0;
+        } else {
+          c->border = opt_bw;
+        }
 
 	update_window_type_flags(c, window_type);
 	init_geometry(c);
